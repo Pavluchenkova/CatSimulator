@@ -9,17 +9,16 @@ namespace CatAsync
 {
     class Cat
     {
-        public readonly string _name;
-        public uint _energy;
-        public Cat(string name, uint energy)
+        public string Name { get; private set; }
+        public uint _energy = 100;
+        public Cat(string name)
         {
-            _name = name;
-            _energy = energy;
+            Name = name;           
         }
-
-        public void Feeding(uint feed)
+        
+        public void Feeding()
         {
-            _energy += feed;
+            _energy += 10;
             if (_energy >= 70)
             {
                 SayPurpur();
@@ -30,10 +29,10 @@ namespace CatAsync
         {
             do
             {
-                var interval = 200000/_energy;
+                var interval = 1000;
                 Thread.Sleep((int)interval);
                
-                if(_energy <= 50)
+                if(_energy <= 60)
                 {
                     SayMeow();
                 }
@@ -49,7 +48,7 @@ namespace CatAsync
 
         public void SayMeow()
         {
-            Console.WriteLine("Meow!");
+            Console.WriteLine($"Meow! ({this._energy})");
         }
 
     }

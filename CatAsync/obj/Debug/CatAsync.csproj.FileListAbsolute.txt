@@ -1,1 +1,7 @@
 c:\users\asa\documents\visual studio 2015\Projects\CatAsync\CatAsync\bin\Debug\CatAsync.exe.config
+C:\Users\ASA\Documents\GitHub\CatSimulator\CatAsync\bin\Debug\CatAsync.exe.config
+C:\Users\ASA\Documents\GitHub\CatSimulator\CatAsync\bin\Debug\CatAsync.exe
+C:\Users\ASA\Documents\GitHub\CatSimulator\CatAsync\bin\Debug\CatAsync.pdb
+C:\Users\ASA\Documents\GitHub\CatSimulator\CatAsync\obj\Debug\CatAsync.csprojResolveAssemblyReference.cache
+C:\Users\ASA\Documents\GitHub\CatSimulator\CatAsync\obj\Debug\CatAsync.exe
+C:\Users\ASA\Documents\GitHub\CatSimulator\CatAsync\obj\Debug\CatAsync.pdb
