@@ -10,17 +10,26 @@ namespace CatAsync
     {
         static void Main(string[] args)
         {
-            
-            Console.WriteLine("Give me a name:");
-            string name = Console.ReadLine();
-
+            string name = GetCatName();
             Cat myCat = new Cat(name);
-
             Task task = new Task(myCat.Physiology);
             task.Start();
-            Console.WriteLine($"I'm your cat {myCat.Name} \nPlease press: \nF - feed \nC - call \nP - pet \nEsc - exit ");
-            Console.WriteLine($"{myCat.CatImage()}");
-   
+            Greating(myCat);
+            Living(myCat);
+        }
+        private static string GetCatName()
+        {
+            Console.WriteLine("Give me a name:");
+            string name = Console.ReadLine();
+            return name;
+        }
+        private static void Greating(Cat cat)
+        {
+            Console.WriteLine($"I'm your cat {cat.Name} \nPlease press: \nF - feed \nC - call \nP - pet \nEsc - exit ");
+            Console.WriteLine($"{cat.CatImage()}");
+        }
+        private static void Living(Cat cat)
+        {
             var working = true;
 
             while (working)
@@ -29,16 +38,16 @@ namespace CatAsync
                 switch (key)
                 {
                     case ConsoleKey.F:
-                        myCat.Feeding();
-                        break;                 
+                        cat.Feeding();
+                        break;
                     case ConsoleKey.C:
-                        myCat.Call();
+                        cat.Call();
                         break;
                     case ConsoleKey.P:
-                        myCat.Pet();
+                        cat.Pet();
                         break;
                     case ConsoleKey.Escape:
-                            working = false;
+                        working = false;
                         break;
                 }
             }
